@@ -83,13 +83,13 @@ Paste the HTML below into [`app/templates/login.hbs`](../app/templates/login.hbs
 <summary>Click to reveal login screen HTML</summary>
 
 ```html {starter-file=login.html}
-<div class="mx-auto">
-  <div class="flex justify-center flex-row w-full leading-loose text-3xl">
+<main class="mx-auto">
+  <h1 class="flex justify-center flex-row w-full leading-loose text-3xl">
     Login
-  </div>
+  </h1>
   <div class="flex justify-center flex-row w-full">
     <div class="w-full max-w-xs">
-      <form class="bg-gray-300 shadow-md rounded px-8 pt-6 pb-8 mb-4">
+      <form class="bg-blue-800 shadow-md rounded px-8 pt-6 pb-8 mb-4">
         <div class="inline-block relative w-64 mt-2">
           <label class="sr-only">Select a user</label>
           <select
@@ -101,7 +101,7 @@ Paste the HTML below into [`app/templates/login.hbs`](../app/templates/login.hbs
             <option value="2">Sample McData</option>
           </select>
           <div
-            class="pointer-events-none absolute pin-y pin-r flex items-center px-2 text-gray-600"
+            class="pointer-events-none absolute pin-y pin-r flex items-center px-2 text-gray-300"
           >
             <svg
               class="fill-current h-4 w-4"
@@ -114,12 +114,12 @@ Paste the HTML below into [`app/templates/login.hbs`](../app/templates/login.hbs
             </svg>
           </div>
         </div>
-        <p class="text-blue text-xs italic my-4">
+        <p class="text-blue-100 text-sm italic my-4">
           A validation message
         </p>
         <div class="flex items-center justify-between">
           <input
-            class="bg-gray-500 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            class="bg-green-500 text-white w-full font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
             value="Sign In"
             type="submit"
           />
@@ -127,7 +127,7 @@ Paste the HTML below into [`app/templates/login.hbs`](../app/templates/login.hbs
       </form>
     </div>
   </div>
-</div>
+</main>
 ```
 
 </details>
