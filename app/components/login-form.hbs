@@ -12,10 +12,11 @@
           <select
             id="select-user"
             class="block appearance-none w-full bg-white border border-gray-300 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline"
+            {{on "change" this.onSelectChanged}}
           >
-            <option value="" disabled>Select a user</option>
-            <option value="1">Testy Testerson</option>
-            <option value="2">Sample McData</option>
+            <option value="" selected={{not this.userId}}>Select a user</option>
+            <option value="1" selected={{eq this.userId "1"}}>Testy Testerson</option>
+            <option value="2" selected={{eq this.userId "2"}}>Sample McData</option>
           </select>
           <div
             class="pointer-events-none absolute pin-y pin-r flex items-center px-2 text-gray-300"
@@ -32,11 +33,14 @@
           </div>
         </div>
         <p class="text-blue-100 text-sm italic my-4">
-          A validation message
+          {{#if this.userId}}
+            Logged in with userID <code>{{this.userId}}</code>
+          {{/if}}
         </p>
         <div class="flex items-center justify-between">
           <input
-            class="bg-green-500 text-white w-full font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            disabled={{this.isDisabled}}
+            class="{{if this.isDisabled "bg-gray-500" "bg-green-500"}} text-white w-full font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
             value="Sign In"
             type="submit"
           />

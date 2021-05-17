@@ -51,7 +51,7 @@ We should also show some visual indication of whether this button is disabled. R
 
 ```hbs
   <input
-    class="{{if this.isDisabled "bg-grey" "bg-green-600"}} ...">
+    class="{{if this.isDisabled "bg-gray-500" "bg-green-600"}} ...">
 ```
 
 And also update the `<option>` tags so their `selected` attribute is true when the `userId` property matches the selected value.
